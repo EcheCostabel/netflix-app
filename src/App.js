@@ -1,8 +1,14 @@
+import { makeStyles } from '@mui/styles';
 import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Paypal from "./pages/Paypal";
+import Profile from "./pages/Profile";
 
 
 function App() {
   const user = null;
+  const classes = useStyles();
 
   return (
     <div className={classes.root}>
@@ -20,5 +26,12 @@ function App() {
     </div>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+
+  }
+}));
+
 
 export default App;
