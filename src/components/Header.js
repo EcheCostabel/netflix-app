@@ -22,7 +22,7 @@ const Header = () => {
   }, [])
 
   return (
-    <AppBar position="sticky" elevation={0}>
+    <AppBar position="sticky" elevation={0} className={classes.root}>
       <Toolbar className={classes.toolbar}>
 
         <IconButton onClick={() => navigate('/')}>
@@ -37,7 +37,7 @@ const Header = () => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: '#111',
+    background: '#111',
     top: 0,
     left: 0,
     right: 0
