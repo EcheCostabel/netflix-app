@@ -1,6 +1,5 @@
 import { makeStyles } from '@mui/styles';
 import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
-import Header from './components/Header';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Paypal from "./pages/Paypal";
@@ -32,8 +31,9 @@ function App() {
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
-    backgroundColor: '#111'
-  }
+    // backgroundColor: '#111'
+  },
+
 }));
 
 
