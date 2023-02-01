@@ -2,8 +2,8 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import logo from "../img/logo-netflix.png";
 import herobanner from '../img/hero-banner2.jpg'
-import { Button } from "@mui/material";
-import { NetflixButton } from "../styled/styledcomponents";
+import { Button, Typography } from "@mui/material";
+import { NetflixButton, NetflixInput } from "../styled/styledcomponents";
 
 const Login = () => {
   const classes = useStyles();
@@ -11,6 +11,22 @@ const Login = () => {
     <div className={classes.root}>
       <img src={logo} alt="logo" className={classes.logo} />
       <NetflixButton className={classes.session}>Iniciar sesion</NetflixButton>
+      <div className={classes.info}>
+        
+        <Typography variant="h4" gutterBottom>
+          Unlimited films, TV programmes and more.
+        </Typography>
+        <Typography variant="h5" >
+          Watch anywhere. Cancel at any time.
+        </Typography>
+        <Typography variant="h6" gutterBottom>
+          Ready to watch? Enter your email to create or restart your membership.
+        </Typography>
+        <div className={classes.inputBlock}>
+          <NetflixInput />
+          <NetflixButton>GET STARTED</NetflixButton>
+        </div>
+      </div>
     </div>
   );
 };
@@ -23,7 +39,10 @@ const useStyles = makeStyles((theme) => ({
     objectFit: 'contain',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   logo: {
     position: 'fixed',
@@ -38,6 +57,12 @@ const useStyles = makeStyles((theme) => ({
     right: 20,
     top: 20
   },
+  info: {
+    color: '#fff',
+    zIndex: 15,
+    textAlign: 'center',
+
+  }
 }));
 
 export default Login;

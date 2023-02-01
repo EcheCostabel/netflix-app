@@ -1,4 +1,10 @@
 import styled from 'styled-components';
+import { InputBase } from '@mui/material';
+
+export const NetflixInput = styled(InputBase)`
+
+`
+
 
 export const NetflixButton = styled.button`
 z-index: 15;
