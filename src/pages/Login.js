@@ -3,13 +3,14 @@ import { makeStyles } from "@mui/styles";
 import logo from "../img/logo-netflix.png";
 import herobanner from '../img/hero-banner2.jpg'
 import { Button } from "@mui/material";
+import { NetflixButton } from "../styled/styledcomponents";
 
 const Login = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <img src={logo} alt="logo" className={classes.logo} />
-      <Button className={classes.session}>Iniciar sesion</Button>
+      <NetflixButton className={classes.session}>Iniciar sesion</NetflixButton>
     </div>
   );
 };
