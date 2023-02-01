@@ -1,5 +1,6 @@
 import { makeStyles } from '@mui/styles';
 import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
+import Header from './components/Header';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Paypal from "./pages/Paypal";
@@ -7,7 +8,7 @@ import Profile from "./pages/Profile";
 
 
 function App() {
-  const user = null;
+  const user = 'pepe';
   const classes = useStyles();
 
   return (
@@ -23,13 +24,15 @@ function App() {
           )
         }
       </Router>
+     
     </div>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
-
+    minHeight: '100vh',
+    backgroundColor: '#111'
   }
 }));
 
