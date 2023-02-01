@@ -23,7 +23,7 @@ const Login = () => {
           Ready to watch? Enter your email to create or restart your membership.
         </Typography>
         <div className={classes.inputBlock}>
-          <NetflixInput />
+          <NetflixInput placeholder="Email address" />
           <NetflixButton>GET STARTED</NetflixButton>
         </div>
       </div>
@@ -61,6 +61,12 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     zIndex: 15,
     textAlign: 'center',
+    '& h4': {
+      fontWeight: 800,
+    },
+    '& h5': {
+      fontWeight: 800
+    }
 
   }
 }));
