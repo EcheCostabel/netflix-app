@@ -7,7 +7,7 @@ import Profile from "./pages/Profile";
 
 
 function App() {
-  const user = 'pepe';
+  const user = null;
   const classes = useStyles();
 
   return (
@@ -32,7 +32,7 @@ function App() {
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
-    backgroundColor: '#111'
+    // backgroundColor: '#111'
   },
 
 }));
