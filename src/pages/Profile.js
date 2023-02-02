@@ -20,7 +20,7 @@ const Profile = () => {
           <div className={classes.details}>
             <div className={classes.plans}>
               <Typography variant="h6">email usuario</Typography>
-              <Typography variant="h5" gutterBottom>Plans</Typography>
+              <Typography className={classes.plantsText} variant="h5" gutterBottom>Plans</Typography>
               <Plans cost={7.99}>Netflix Standard</Plans>
               <Plans cost={11.99}>Netflix Basic</Plans>
               <Plans cost={15.99}>Netflix Premium</Plans>
@@ -50,7 +50,20 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   details: {
-    
+    width: '100%',
+    marginLeft: '24px',
+    '& h6': {
+      backgroundColor: '#aaa',
+      padding: '8px',
+      marginBottom: '8px',
+      fontSize: '18px'
+    }
+  },
+  plans: {
+    width: '100%',
+    '& h5': {
+      borderBottom: '1px solid lightgray'
+    }
   }
 }));
 
