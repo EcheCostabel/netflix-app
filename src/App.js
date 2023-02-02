@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 
 function App() {
   const user = null;
+  
   const classes = useStyles();
 
   return (
