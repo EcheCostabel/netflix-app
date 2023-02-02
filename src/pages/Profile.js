@@ -1,10 +1,15 @@
+import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react'
+import Header from '../components/Header';
 
 const Profile = () => {
   const classes = useStyles();
   return (
-    <div>Profile</div>
+    <div className={classes.root}>
+      <Header />
+      <Typography variant='h3'>Edit profile</Typography>
+      </div>
   )
 }
 

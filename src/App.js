@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Paypal from "./pages/Paypal";
@@ -7,8 +7,8 @@ import Profile from "./pages/Profile";
 
 
 function App() {
-  const user = null;
-  
+  const user = 'Pepe';
+
   const classes = useStyles();
 
   return (
