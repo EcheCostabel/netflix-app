@@ -5,6 +5,9 @@ import Header from "../components/Header";
 import Plans from "../components/Plans";
 import avatar from "../img/img-avatar.jpg";
 import { NetflixButton } from "../styled/styledcomponents";
+import './imgg.css'
+
+
 
 const Profile = () => {
   const classes = useStyles();
@@ -12,9 +15,8 @@ const Profile = () => {
     <div className={classes.root}>
       <Header />
       <Typography variant="h3">Edit profile</Typography>
-      <div className={classes.body}>
         <div className={classes.info}>
-          <img src={avatar} alt="avatar" />
+          <img src={avatar} alt="avatar" className="imgg" />
           <div className={classes.details}>
             <div className={classes.plans}>
               <Typography variant="h6">email usuario</Typography>
@@ -26,7 +28,6 @@ const Profile = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
@@ -35,8 +36,22 @@ const useStyles = makeStyles((theme) => ({
   root: {
     color: "#fff",
     minHeight: "100vh",
-    width: "100vh",
+    maxWidth: "880px",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
+  info: {
+    width: '80%',
+    display: 'flex',
+    '& img': {
+      height: '100px',
+
+    }
+  },
+  details: {
+    
+  }
 }));
 
 export default Profile;
