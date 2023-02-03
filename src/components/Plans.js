@@ -17,7 +17,14 @@ const Plans = ({cost, children}) => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-
+    marginTop: '24px',
+    marginBottom: '24px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    '& button': {
+      marginBottom: '16px'
+    }
   }
 }));
 
