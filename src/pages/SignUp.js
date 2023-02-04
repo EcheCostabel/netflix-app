@@ -37,7 +37,15 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-evenly',
     alignItems: 'center',
   },
-  
+  form: {
+    width: '80%'
+  },
+  email: {
+    marginBottom: '16px',
+  },
+  password: {
+    marginBottom: '32px'
+  }
 }));
 
 export default SignUp;
