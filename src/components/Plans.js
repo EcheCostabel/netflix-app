@@ -3,14 +3,14 @@ import { makeStyles } from '@mui/styles';
 import React from 'react'
 import { NetflixButton } from '../styled/styledcomponents';
 
-const Plans = ({cost, children}) => {
+const Plans = ({cost, children, color}) => {
   const classes = useStyles();
   return (
       <div className={classes.root}>
         <Typography className={classes.standard} variant='h5'>
             {children}
         </Typography>
-        <NetflixButton>Subscribe</NetflixButton>
+        <NetflixButton color={color}>Subscribe</NetflixButton>
       </div>
   )
 }

@@ -15,7 +15,7 @@ border:none
 
 export const NetflixButton = styled.button`
 z-index: 15;
-background-color: red;
+background-color: ${(color) => color === 'gray' ? 'lightgray' : 'red'};
 color: #fff;
 border-radius: 5px;
 text-transform: inherit;
