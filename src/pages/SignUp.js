@@ -8,7 +8,7 @@ const SignUp = () => {
   );
 };
 
-const useStyles = makeStyleses((theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {},
 }));
 

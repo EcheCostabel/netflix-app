@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import logo from "../img/logo-netflix.png";
 import herobanner from '../img/hero-banner2.jpg'
+import SignUp from './SignUp'
 import { Button, Typography } from "@mui/material";
 import { NetflixButton, NetflixInput } from "../styled/styledcomponents";
 
