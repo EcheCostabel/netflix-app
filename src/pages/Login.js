@@ -8,7 +8,7 @@ import { NetflixButton, NetflixInput } from "../styled/styledcomponents";
 
 const Login = () => {
 
-  const [ signIn, setSignIn ] = useState(false)
+  const [ signIn, setSignIn ] = useState(true)
   const classes = useStyles();
   return (
     <div className={classes.root}>
