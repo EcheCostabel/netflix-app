@@ -11,8 +11,8 @@ const SignUp = () => {
         Sign In
     </Typography>
     <form className={classes.form}>
-      <NetflixInput placeholder="Email"/>
-      <NetflixInput placeholder="Password" />
+      <NetflixInput placeholder="Email" className={classes.email} />
+      <NetflixInput placeholder="Password" className={classes.password} />
       <NetflixButton wide='medium' radius>Sign In</NetflixButton>
 
       <Typography variant="subtitle2">
@@ -27,7 +27,17 @@ const SignUp = () => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  root: {
+    maxWidth: '350px',
+    width: '20rem',
+    height: '25rem',
+    background: 'rgba(0,0,0,0.65)',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  
 }));
 
 export default SignUp;
