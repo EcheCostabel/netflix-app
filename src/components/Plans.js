@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     '& button': {
       marginBottom: '16px'
     }
+  },
+  standard: {
+    fontSize: '1.2rem',
   }
 }));
 
