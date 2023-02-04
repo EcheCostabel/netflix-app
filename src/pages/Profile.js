@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     color: "#fff",
     minHeight: "100vh",
-    maxWidth: "880px",
+    maxWidth: "100vw",
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
