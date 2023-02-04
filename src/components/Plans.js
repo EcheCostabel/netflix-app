@@ -1,9 +1,11 @@
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import React from 'react'
+import React, { useState } from 'react'
 import { NetflixButton } from '../styled/styledcomponents';
 
 const Plans = ({cost, children, color, wide}) => {
+
+
   const classes = useStyles();
   return (
       <div className={classes.root}>

@@ -7,7 +7,7 @@ import Profile from "./pages/Profile";
 
 
 function App() {
-  const user = 'Pepe';
+  const user = null;
 
   const classes = useStyles();
 

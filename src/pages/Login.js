@@ -6,13 +6,18 @@ import { Button, Typography } from "@mui/material";
 import { NetflixButton, NetflixInput } from "../styled/styledcomponents";
 
 const Login = () => {
+
+  const [ signIn, setSignIn ] = useState(false)
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <img src={logo} alt="logo" className={classes.logo} />
       <NetflixButton className={classes.session}>Iniciar sesion</NetflixButton>
       <div className={classes.info}>
-        
+
+        {
+          signIn ? (<SignUp />) : (
+        <>
         <Typography variant="h4" gutterBottom>
           Unlimited films, TV programmes and more.
         </Typography>
@@ -26,6 +31,10 @@ const Login = () => {
           <NetflixInput placeholder="Email address" />
           <NetflixButton>GET STARTED</NetflixButton>
         </div>
+        </>
+          )
+        }
+        
       </div>
     </div>
   );
