@@ -2,39 +2,45 @@ import { makeStyles } from '@mui/styles';
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { auth } from './firebase';
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Paypal from "./pages/Paypal";
 import Profile from "./pages/Profile";
+import { login, logout, selectUser } from './features/UserSlice';
 
 
 function App() {
-  const user = null;
+  const user = useSelector(selectUser);
   const classes = useStyles();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    auth.onAuthStateChanged((userAuth) => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
       if(userAuth) {
-        dispatch()
+        dispatch(login({
+          uid: userAuth.uid,
+          email: userAuth.email
+        }))
+      } else {
+        dispatch(logout)
       }
     })
-  },[])
+    return unsubscribe;
+  },[dispatch])
 
   return (
 
     <div className={classes.root}>
       <Router>
-        {
-          !user ? (<Login />) : (
+
             <Routes>
+              <Route path='/login' element={<Login />}></Route>
               <Route path="/profile" element={<Profile />}></Route>
               <Route path="/checkout" element={<Paypal />}></Route>
               <Route path="/" element={<Home />}></Route>
             </Routes>
-          )
-        }
+
       </Router>
      
     </div>

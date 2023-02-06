@@ -3,16 +3,19 @@ import { makeStyles } from "@mui/styles";
 import React, { useState } from "react";
 import { NetflixButton, NetflixInput } from "../styled/styledcomponents";
 import {auth} from '../firebase'
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const classes = useStyles();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
   const signIn = (e) => {
     e.preventDefault();
     auth.signInWithEmailAndPassword(email, password)
-    .then((authUser) => console.log(authUser))
+    .then((authUser) => navigate('/'))
     .catch((err) => alert(err.message))
   }
 
@@ -20,7 +23,7 @@ const SignUp = () => {
   const register = (e) => {
     e.preventDefault();
     auth.createUserWithEmailAndPassword(email, password)
-    .then((authUser) => console.log(authUser))
+    .then((authUser) => navigate('/'))
     .catch((err) => alert(err.message))
   }
 
