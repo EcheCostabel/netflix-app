@@ -12,7 +12,7 @@ const SignUp = () => {
   const signIn = () => {}
   const register = (e) => {
     e.preventDefault();
-    auth.createUserWithEmailPassword(email, password)
+    auth.createUserWithEmailAndPassword(email, password)
     .then((authUser) => console.log(authUser))
     .catch((err) => alert(err.message))
   }
@@ -26,17 +26,19 @@ const SignUp = () => {
       <form className={classes.form}>
         <NetflixInput
           value={email}
+          type='email'
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
           className={classes.email}
         />
         <NetflixInput
           value={password}
+          type='password'
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
           className={classes.password}
         />
-        <NetflixButton wide="medium" radius type="submit" onClick={signIn}>
+        <NetflixButton wide="medium" type="submit" onClick={signIn}>
           Sign In
         </NetflixButton>
 
