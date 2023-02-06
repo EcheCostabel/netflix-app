@@ -1,10 +1,11 @@
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 const Rows = ({title, fetchUrl, isLargeRow }) => {
   const classes = useStyles();
-  const [movies, setMovies ] = useState();
+  const [movies, setMovies ] = useState([]);
 
   const base_url = 'https://image.tmdb.org/t/p/original'
 
@@ -21,7 +22,23 @@ const Rows = ({title, fetchUrl, isLargeRow }) => {
     <div className={classes.root}>
       <Typography variant='h4'>{title}</Typography>
       <div className={classes.posters}>
-
+          {
+            movies.map((movie) => 
+            ((isLargeRow && movie.poster_path) ||
+            (!isLargeRow && movie.backdrop_path)) && (
+              <img 
+              className={`${classes.poster} ${
+                isLargeRow && classes.posterLarge
+              }`}
+              key={movie.id}
+              src={`${base_url}${
+                isLargeRow ? movie.poster_path : movie?.backdrop_path
+              }`}
+              alt={movie?.name}
+              />
+            )
+            )
+          }
       </div>
       </div>
   )
