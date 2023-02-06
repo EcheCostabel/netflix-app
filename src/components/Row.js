@@ -66,6 +66,12 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       transform: 'scale(1.1)'
     }
+  },
+  posterLarge: {
+    maxHeight: '15rem',
+    '&:hover': {
+      transform: 'scale(1.15)'
+    }
   }
 }));
 

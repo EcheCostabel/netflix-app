@@ -1,16 +1,36 @@
 import { Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import instance from "../axios";
 import Baanner from "../img/banner.jpeg";
+import requests from "../Requests";
 
 const Banner = () => {
   const classes = useStyles();
+  const [ movie, setMovie ] = useState([])
 
   const truncate = (string, n) => string?.length > n ? `${string.substr(0, n-1)} ...` : string
     
+  useEffect(() => {
+    const fetchData = async () => {
+      const request = await instance.get(requests.fetchNetflixOriginals)
+    const random = Math.floor(Math.random()* request.data.result.length -1)
+    setMovie(request.data.results[random])
+    return request
+  }
+  fetchData();
+  },[])
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{
+      backgroundImage: `url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
+      position: "relative",
+      height: "440px",
+      objectFit: "contain",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      color: '#fff'
+    }}>
       <div className={classes.content}>
         <Typography variant="h2" component='h1' >
           Movie Title
@@ -32,13 +52,7 @@ const Banner = () => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundImage: `url(${Baanner})`,
-    position: "relative",
-    height: "440px",
-    objectFit: "contain",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    color: '#fff'
+
   },
   buttons: {
     '& button': {
