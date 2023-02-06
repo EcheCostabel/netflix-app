@@ -16,7 +16,7 @@ const SignUp = () => {
       <NetflixButton wide='medium' radius>Sign In</NetflixButton>
 
       <Typography variant="subtitle2">
-        New to Netflix? {' '}
+        New to Netflix? {'  '}
         <span className={classes.signUpLink} >
           Sign Up now. {' '}
         </span>
@@ -45,6 +45,13 @@ const useStyles = makeStyles((theme) => ({
   },
   password: {
     marginBottom: '32px'
+  },
+  signUpLink: {
+    color: '#fff',
+    cursor: 'pointer',
+    '&:hover': {
+      textDecoration: 'underline'
+    }
   }
 }));
 
