@@ -1,3 +1,7 @@
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import 'firebase/compat/auth'
+
 const firebaseConfig = {
     apiKey: "AIzaSyAzUe_OB3Rv1KgPBkaWfUbxMrZILulEric",
     authDomain: "netflix-clone-4595d.firebaseapp.com",
