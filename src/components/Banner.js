@@ -39,6 +39,7 @@ const Banner = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "#fff",
+        padding: '2rem'
       }}
     >
       <div className={classes.content}>
@@ -87,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     right: "0",
     zIndex: 99,
     backgroundImage:
-      "linear-gradient(160deg, transparent, rgba(37,37,37,0.61), #111)",
+      "linear-gradient(160deg, transparent, rgba(37,37,37,0.21), #111)",
   },
 }));
 
