@@ -13,6 +13,7 @@ const Paypal = () => {
       .Buttons({
         style: {
           tagline: false,
+          left: '50%'
       },
         createOrder: (data, actions, err)=> {
           return actions.order.create({

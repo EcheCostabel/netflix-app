@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Paypal from "./pages/Paypal";
 import Profile from "./pages/Profile";
 import { login, logout, selectUser } from './features/UserSlice';
+import Checkout from './components/Checkout';
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
             <Routes>
               <Route path='/login' element={<Login />}></Route>
               <Route path="/profile" element={<Profile />}></Route>
-              <Route path="/checkout" element={<Paypal />}></Route>
+              <Route path="/checkout" element={<Checkout />}></Route>
               <Route path="/" element={<Home />}></Route>
             </Routes>
 
