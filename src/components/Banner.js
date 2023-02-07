@@ -53,10 +53,7 @@ const Banner = () => {
             variant="h6"
             className={classes.description}
           >
-            {truncate(
-              "          Movie Description Movie Description Movie Description Movie Description Movie Description Movie Description Movie Description Movie Description Movie Description Movie Description Movie Description Movie Description ",
-              160
-            )}
+            {truncate(movie?.overview, 160)}
           </Typography>
           <div className={classes.fadeBottom}></div>
         </div>
