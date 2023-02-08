@@ -19,7 +19,7 @@ const Plans = ({cost, children, color, wide}) => {
   return (
       <div className={classes.root}>
         <Typography className={classes.standard} variant='h5'>
-            {children}
+            {children} ${cost}
         </Typography>
         <NetflixButton
         color={color} 

@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 import logo from "../img/logo-netflix.png";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { style } from "@mui/system";
 
 
 const Header = () => {
@@ -22,7 +23,7 @@ const Header = () => {
   }, [])
 
   return (
-    <AppBar position="sticky" elevation={0} className={classes.root}>
+    <AppBar position="sticky" elevation={0} className={classes.root} style={{    backgroundColor: '#111',}}>
       <Toolbar className={classes.toolbar}>
 
         <IconButton onClick={() => navigate('/')}>
