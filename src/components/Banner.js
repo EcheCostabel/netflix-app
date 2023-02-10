@@ -2,9 +2,7 @@ import { Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React, { useEffect, useState } from "react";
 import instance from "../axios";
-import Baanner from "../img/banner.jpeg";
 import requests from "../Requests";
-import axios from "axios";
 
 const Banner = () => {
   const classes = useStyles();
@@ -30,7 +28,7 @@ const Banner = () => {
 
   return (
     <div
-      className={classes.root}
+      className='rootBanner'
       style={{
         backgroundImage: `url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
         position: "relative",

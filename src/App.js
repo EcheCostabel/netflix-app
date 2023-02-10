@@ -1,4 +1,3 @@
-import { makeStyles } from '@mui/styles';
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { auth } from './firebase';
@@ -9,11 +8,11 @@ import Paypal from "./pages/Paypal";
 import Profile from "./pages/Profile";
 import { login, logout, selectUser } from './features/UserSlice';
 import Checkout from './components/Checkout';
+import './App.css'
 
 
 function App() {
   const user = useSelector(selectUser);
-  const classes = useStyles();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -32,7 +31,7 @@ function App() {
 
   return (
 
-    <div className={classes.root}>
+    <div className='rootApp'>
       <Router>
 
             <Routes>
@@ -47,14 +46,6 @@ function App() {
     </div>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    minHeight: '100vh',
-    backgroundColor: '#111'
-  },
-
-}));
 
 
 export default App;
