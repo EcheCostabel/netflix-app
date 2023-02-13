@@ -1,9 +1,8 @@
-import { AppBar, Avatar, IconButton, Toolbar } from "@mui/material";
+import { AppBar, Avatar, IconButton, Toolbar } from "@mui/material";7
 import { makeStyles } from "@mui/styles";
 import logo from "../img/logo-netflix.png";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { style } from "@mui/system";
 
 
 const Header = () => {
